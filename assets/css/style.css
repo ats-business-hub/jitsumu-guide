@@ -336,3 +336,11 @@ a.card:hover { border-color: var(--teal); }
 @media (min-width: 880px) {
   .home-hero, .page-hero { padding: 3rem 0 3.1rem; }
 }
+
+img.vc-beacon {
+  border: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
