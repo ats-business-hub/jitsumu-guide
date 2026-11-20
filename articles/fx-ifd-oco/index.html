@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FXのIFD・OCO・IFO注文の基本と、使う前に確認すること｜BON ZAM SHIBA</title>
+  <meta name="description" content="FXの特殊注文であるIFD、OCO、IFO（IFDOCO）の仕組みと、有効期限、約定しない場合、スリッページなど、使う前に確認する点を整理します。利益や損失の限定は保証しません。">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="FXのIFD・OCO・IFO注文の基本と、使う前に確認すること｜BON ZAM SHIBA">
+  <meta property="og:description" content="FXの特殊注文であるIFD、OCO、IFO（IFDOCO）の仕組みと、有効期限、約定しない場合、スリッページなど、使う前に確認する点を整理します。利益や損失の限定は保証しません。">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://ats-business-hub.github.io/jitsumu-guide/articles/fx-ifd-oco/">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-desktop">
+      <div class="header-inner">
+        <a class="brand" href="../../">
+          <span class="mark">BZS</span>
+          <span class="brand-text">
+            <span class="brand-name">BON ZAM SHIBA</span>
+            <span class="brand-tag">働く人の実務ガイド</span>
+          </span>
+        </a>
+        <label class="nav-toggle" for="nav-check" aria-label="メニューを開く"><span></span></label>
+      </div>
+      <input type="checkbox" id="nav-check">
+      <nav class="site-nav" aria-label="主要">
+        <ul>
+          <li><a href="../../">トップ</a></li>
+          <li><a href="../../categories/it-tenshoku/">IT転職</a></li>
+          <li><a href="../../categories/fukugyo/">副業</a></li>
+          <li><a href="../../categories/zeikin/">確定申告・税金</a></li>
+          <li><a href="../../categories/toushi/">投資</a></li>
+          <li><a href="../../categories/furusato/">ふるさと納税</a></li>
+          <li><a href="../../categories/travel/">旅行予約</a></li>
+          <li><a href="../../about/">運営者情報</a></li>
+          <li><a href="../../privacy/">プライバシー・広告</a></li>
+          <li><a href="../../contact/">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <article class="wrap">
+      <header class="article-header measure">
+        <nav class="crumbs" aria-label="パンくず"><a href="../../">トップ</a> ／ <a href="../../categories/toushi/">投資</a> ／ FXのIFD・OCO・IFO注文の基本と、使う前に確認すること</nav>
+        <p class="kicker">投資</p>
+        <h1>FXのIFD・OCO・IFO注文の基本と、使う前に確認すること</h1>
+        <p class="meta">公開日（サイト原稿）：2026-11-20　記述の基準日：2026-11-20</p>
+      </header>
+      <div class="measure">
+        <p class="pr-notice"><strong>広告（PR）について。</strong>本記事には、A8.net、バリューコマースなどのアフィリエイト（成果報酬型広告）リンクが含まれます。リンク経由で申し込みや利用があった場合、運営者が紹介料を受け取ることがあります。リンクはテキストのみです。就職、収入、税負担の軽減、投資の利益、最安値などを保証するものではありません。各サービスの対象条件・成果地点・料金は、申し込み前に公式ページで確認してください。</p>
+        <div class="article-body">
+          <p>FXの取引画面には、成行や指値のほかに、「IFD」「OCO」「IFO（IFDOCO）」といった注文方法が並んでいることがあります。新規の注文と同時に、利益確定や損切りの注文まで出しておけるため、画面を見続けられない人に向く、と紹介されることがあります。一方で、仕組みを理解しないまま使うと、思っていない価格で約定したり、片方の注文が残ったままになったりします。</p>
+<p>この記事は、特殊注文の仕組みと、使う前に確認する点の整理です。どの注文方法が得か、勝てる使い方は示しません。注文を出しておけば損失が一定の額に収まる、ということも保証できません。注文の名称や細かい動作は、FX会社によって違います。最後は、利用するFX会社の取引ルールで確認してください。レバレッジとリスクの基本は、<a href="../../articles/fx-risk-leverage/">FX初心者が最初に知るべきリスクとレバレッジ</a>を見てください。</p>
+<h2>3つの注文の、おおまかな仕組み</h2>
+<table>
+<thead>
+<tr>
+<th>注文</th>
+<th>おおまかな仕組み</th>
+<th>よく使われる場面の例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IFD（イフダン）</td>
+<td>1つ目の注文（新規）が約定したら、2つ目の注文（決済）が有効になる</td>
+<td>指定の価格で新規に入り、決済の価格もあらかじめ決めておく</td>
+</tr>
+<tr>
+<td>OCO（オーシーオー）</td>
+<td>2つの注文を同時に出し、片方が約定したら、もう片方は取り消される</td>
+<td>保有中のポジションに、利益確定と損切りの両方を置く</td>
+</tr>
+<tr>
+<td>IFO（IFDOCO）</td>
+<td>IFDの2つ目を、OCOにしたもの。新規が約定したら、利益確定と損切りの両方が有効になる</td>
+<td>新規から決済までを、まとめて予約しておく</td>
+</tr>
+</tbody>
+</table>
+<p>名称は一般的な呼び方です。FX会社によっては、別の名前で呼んだり、設定できる組合せが違ったりします。</p>
+<h2>使う前に確認すること</h2>
+<ul>
+<li>注文の有効期限（当日限り、週末まで、無期限など）と、期限切れで消えるタイミング</li>
+<li>逆指値（損切り）の注文が、急な値動きのときに、指定した価格から離れて約定することがあるか（スリッページ）</li>
+<li>週明けの窓開けや、経済指標の発表時に、注文がどう扱われるか</li>
+<li>新規注文が約定しないまま、決済の注文だけが残ることはないか</li>
+<li>一部だけ約定した場合（部分約定）の扱い</li>
+<li>注文を変更・取消できる条件と、操作の手順</li>
+</ul>
+<p>逆指値の注文は、損失を抑える目的で使われますが、相場が急に飛んだ場合は、指定した価格よりも不利な価格で約定することがあります。ロスカットの仕組みと合わせて、証拠金に余裕を持たせてください。</p>
+<h2>デモ口座で動きを確かめる</h2>
+<p>特殊注文は、実際の資金を入れる前に、デモ口座などで、約定したときに何が起きるかを確かめておくと、操作の取り違えを減らせます。デモと本番の違いは、<a href="../../articles/fx-demo-koza/">FXのデモ口座の使い方と、本番口座に移る前の確認点</a>で整理しています。注文をどの価格に置くかの考え方は、チャートの見方とも関わります。<a href="../../articles/fx-chart-beginner/">初心者向け。FXチャートの見方と、取引の前に確認すること</a>も見てください。</p>
+<h2>取引ルールを確認する窓口の例</h2>
+<p>注文の種類や有効期限、約定の扱いを、公式の取引ルールで確認する窓口の一例として、<a href="https://px.a8.net/svt/ejp?a8mat=4BGNCL+GDF77M+1WP2+69WPU" target="_blank" rel="noopener noreferrer">DMM FX</a>、<a href="https://px.a8.net/svt/ejp?a8mat=4BGNCL+12P8N6+48D0+68EPE" target="_blank" rel="noopener noreferrer">FXTF</a>があります。利用できる注文の種類、取引時間、スプレッド、手数料は時期で変わります（最新の条件は<span class="unverified">未確認</span>）。FX会社が金融商品取引業者として登録されているかは、金融庁の登録業者一覧で確認できます。特定の会社を勧めるものではなく、口座を開けば利益が出ることは保証できません。最新の手数料・条件は公式サイトでご確認ください。</p>
+<p>FXの注文や証拠金の考え方は、専門の姉妹サイトでも扱っています。<a href="https://ats-business-hub.github.io/toushi-fx-nyumon/articles/fx-losscut-ijiritsu/" target="_blank" rel="noopener noreferrer">FXの証拠金維持率とロスカットは、何を止めて、何を止められないか</a>（はじめての投資・FX入門）もご覧ください。</p>
+<h2>よくある質問</h2>
+<p><strong>IFO注文を出しておけば、損失は必ず決めた額で止まりますか。</strong> 止まるとは限りません。急な値動きや窓開けでは、逆指値が指定価格から離れて約定することがあります。</p>
+<p><strong>OCOの片方が約定したのに、もう片方が残っているように見えます。</strong> 通常は自動で取り消されますが、画面の反映や注文の種類によって見え方が違うことがあります。注文履歴を確認し、分からない場合はFX会社のサポートに問い合わせてください。</p>
+<p><strong>特殊注文に追加の手数料はかかりますか。</strong> FX会社によって違います。取引手数料やスプレッドの扱いは、公式の案内で確認してください。</p>
+<h2>まとめ</h2>
+<ul>
+<li>IFDは新規の約定後に決済が有効、OCOは片方の約定でもう片方が取消、IFOはその組合せ</li>
+<li>有効期限、スリッページ、窓開け、部分約定の扱いを、使う前に確認する</li>
+<li>逆指値を置いても、損失が必ず決めた額で止まるとは限らない</li>
+<li>本番の前に、デモ口座で動作を確かめる</li>
+<li>最新の取引ルールは、各FX会社の公式サイトでご確認ください</li>
+</ul>
+        </div>
+        <p class="article-endnote">本記事は一般的な情報提供です。税務助言、投資助言、特定の商品・業者・求人の推奨ではありません。制度やサービス内容は変わることがあります。最新の公式情報を確認してください。確認できていない事項は「未確認」と表示しています。就職、収入、税負担の軽減、投資の利益、最安値などは保証できません。</p>
+        <section class="related"><h2>関連する記事</h2><ul><li><a href="../../articles/nisa-nennai/">新NISAで年内に確認すること（使い残した年間投資枠は繰り越せない）</a></li><li><a href="../../articles/fx-chart-beginner/">初心者向け。FXチャートの見方と、取引の前に確認すること</a></li><li><a href="../../articles/nisa-tokutei/">新NISAと特定口座の違い。先に知る仕組みと税金</a></li><li><a href="../../articles/shogaku-kabu-chui/">少額から始める株式投資で、先に確認したい注意点</a></li></ul></section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <ul class="footer-nav">
+        <li><a href="../../">トップ</a></li>
+          <li><a href="../../categories/it-tenshoku/">IT転職</a></li>
+          <li><a href="../../categories/fukugyo/">副業</a></li>
+          <li><a href="../../categories/zeikin/">確定申告・税金</a></li>
+          <li><a href="../../categories/toushi/">投資</a></li>
+          <li><a href="../../categories/furusato/">ふるさと納税</a></li>
+          <li><a href="../../categories/travel/">旅行予約</a></li>
+          <li><a href="../../about/">運営者情報</a></li>
+          <li><a href="../../privacy/">プライバシー・広告</a></li>
+          <li><a href="../../contact/">お問い合わせ</a></li>
+      </ul>
+      <nav class="sister-sites" aria-label="姉妹サイト">
+        <h2>姉妹サイト</h2>
+        <ul>
+        <li><a href="https://ats-business-hub.github.io/travel-yoyaku-guide/">旅の予約ノート</a></li>
+        <li><a href="https://ats-business-hub.github.io/toushi-fx-nyumon/">はじめての投資・FX入門</a></li>
+        <li><a href="https://ats-business-hub.github.io/it-tenshoku-guide/">IT転職・社内SEガイド</a></li>
+        <li><a href="https://ats-business-hub.github.io/hikari-kaisen-guide/">光回線の申し込み前ノート</a></li>
+        <li><a href="https://ats-business-hub.github.io/hoken-sodan-guide/">保険相談の確認ノート</a></li>
+        <li><a href="https://ats-business-hub.github.io/online-school-guide/">オンラインスクールの申し込み前ノート</a></li>
+        </ul>
+      </nav>
+      <p>運営：BON ZAM SHIBA　｜　働く人の実務ガイド</p>
+      <p>記事内のリンクの一部には、A8.net、バリューコマースなどのアフィリエイト（成果報酬型広告）が含まれます。詳細は「プライバシー・広告」をご覧ください。</p>
+      <p>就職、転職、収入、税負担の軽減、投資の利益、最安値などを保証するものではありません。制度や各サービスの条件は公式情報で確認してください。確認できていない事項は「未確認」と表示します。</p>
+      <p class="small">© 2026 BON ZAM SHIBA</p>
+    </div>
+  </footer>
+</body>
+</html>
