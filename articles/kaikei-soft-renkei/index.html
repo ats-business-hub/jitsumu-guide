@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>会計ソフトの銀行口座・クレジットカード連携。確定申告の前に設定しておくことと、自動で取り込んだ明細の確認点｜BON ZAM SHIBA</title>
+  <meta name="description" content="個人事業主や副業の記帳では、会計ソフトに銀行口座やクレジットカードを連携させて明細を取り込む方法があります。連携の前に決めること、取り込める期間、カード払いの二重計上、私用の取引の扱い、自動仕訳のルール、連携が切れたときの対応を整理します。申告の正確さや税額は保証しません。">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="会計ソフトの銀行口座・クレジットカード連携。確定申告の前に設定しておくことと、自動で取り込んだ明細の確認点｜BON ZAM SHIBA">
+  <meta property="og:description" content="個人事業主や副業の記帳では、会計ソフトに銀行口座やクレジットカードを連携させて明細を取り込む方法があります。連携の前に決めること、取り込める期間、カード払いの二重計上、私用の取引の扱い、自動仕訳のルール、連携が切れたときの対応を整理します。申告の正確さや税額は保証しません。">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://ats-business-hub.github.io/jitsumu-guide/articles/kaikei-soft-renkei/">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <!-- seo-inject:start -->
+  <meta property="og:url" content="https://ats-business-hub.github.io/jitsumu-guide/articles/kaikei-soft-renkei/">
+  <meta property="og:site_name" content="BON ZAM SHIBA">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://ats-business-hub.github.io/jitsumu-guide/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "BON ZAM SHIBA", "item": "https://ats-business-hub.github.io/jitsumu-guide/"}, {"@type": "ListItem", "position": 2, "name": "確定申告・税金", "item": "https://ats-business-hub.github.io/jitsumu-guide/categories/zeikin/"}, {"@type": "ListItem", "position": 3, "name": "会計ソフトの銀行口座・クレジットカード連携。確定申告の前に設定しておくことと、自動で取り込んだ明細の確認点", "item": "https://ats-business-hub.github.io/jitsumu-guide/articles/kaikei-soft-renkei/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "会計ソフトの銀行口座・クレジットカード連携。確定申告の前に設定しておくことと、自動で取り込んだ明細の確認点", "description": "個人事業主や副業の記帳では、会計ソフトに銀行口座やクレジットカードを連携させて明細を取り込む方法があります。連携の前に決めること、取り込める期間、カード払いの二重計上、私用の取引の扱い、自動仕訳のルール、連携が切れたときの対応を整理します。申告の正確さや税額は保証しません。", "inLanguage": "ja", "mainEntityOfPage": "https://ats-business-hub.github.io/jitsumu-guide/articles/kaikei-soft-renkei/", "author": {"@type": "Organization", "name": "BON ZAM SHIBA", "url": "https://ats-business-hub.github.io/jitsumu-guide/"}, "publisher": {"@type": "Organization", "name": "BON ZAM SHIBA", "url": "https://ats-business-hub.github.io/jitsumu-guide/"}, "datePublished": "2026-11-24", "dateModified": "2026-11-24", "image": "https://ats-business-hub.github.io/jitsumu-guide/ogp.png"}</script>
+  <!-- seo-inject:end -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-desktop">
+      <div class="header-inner">
+        <a class="brand" href="../../">
+          <span class="mark">BZS</span>
+          <span class="brand-text">
+            <span class="brand-name">BON ZAM SHIBA</span>
+            <span class="brand-tag">働く人の実務ガイド</span>
+          </span>
+        </a>
+        <label class="nav-toggle" for="nav-check" aria-label="メニューを開く"><span></span></label>
+      </div>
+      <input type="checkbox" id="nav-check">
+      <nav class="site-nav" aria-label="主要">
+        <ul>
+          <li><a href="../../">トップ</a></li>
+          <li><a href="../../categories/it-tenshoku/">IT転職</a></li>
+          <li><a href="../../categories/fukugyo/">副業</a></li>
+          <li><a href="../../categories/zeikin/">確定申告・税金</a></li>
+          <li><a href="../../categories/toushi/">投資</a></li>
+          <li><a href="../../categories/furusato/">ふるさと納税</a></li>
+          <li><a href="../../categories/travel/">旅行予約</a></li>
+          <li><a href="../../about/">運営者情報</a></li>
+          <li><a href="../../privacy/">プライバシー・広告</a></li>
+          <li><a href="../../contact/">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <article class="wrap">
+      <header class="article-header measure">
+        <nav class="crumbs" aria-label="パンくず"><a href="../../">トップ</a> ／ <a href="../../categories/zeikin/">確定申告・税金</a> ／ 会計ソフトの銀行口座・クレジットカード連携。確定申告の前に設定しておくことと、自動で取り込んだ明細の確認点</nav>
+        <p class="kicker">確定申告・税金</p>
+        <h1>会計ソフトの銀行口座・クレジットカード連携。確定申告の前に設定しておくことと、自動で取り込んだ明細の確認点</h1>
+        <p class="meta">公開日（サイト原稿）：2026-11-24　記述の基準日：2026-11-24</p>
+      </header>
+      <div class="measure">
+        <p class="pr-notice"><strong>広告（PR）について。</strong>本記事には、A8.net、バリューコマースなどのアフィリエイト（成果報酬型広告）リンクが含まれます。リンク経由で申し込みや利用があった場合、運営者が紹介料を受け取ることがあります。リンクはテキストのみです。就職、収入、税負担の軽減、投資の利益、最安値などを保証するものではありません。各サービスの対象条件・成果地点・料金は、申し込み前に公式ページで確認してください。</p>
+        <div class="article-body">
+          <p>確定申告の準備で、いちばん時間がかかりやすいのは、1年分の取引を帳簿に入れる作業です。会計ソフトの多くは、銀行口座やクレジットカードと連携して、明細を自動で取り込む機能を用意しています。うまく使えば入力の手間は減りますが、取り込んだ明細をそのまま確定させると、二重計上や私用の取引の混入が起きることもあります。</p>
+<p>この記事は、会計ソフトの口座・カード連携を使う前に決めることと、取り込んだ明細を確認するときの点を整理したものです。税務助言ではありません。特定のソフトの機能や料金は示しません。申告が正しく終わること、税額は保証できません。最新の取扱いは国税庁の案内で、ソフトの機能は各社の公式サイトで確認してください。</p>
+<h2>連携の前に決めること</h2>
+<ul>
+<li><strong>事業用の口座とカードを分けるか。</strong> 事業用を分けておくと、連携した明細のほとんどが事業の取引になり、確認が楽になります。分けるときの考え方は、<a href="../../articles/kojin-koza-card/">個人事業主の口座とクレジットカード。分ける意味と、分ける前の確認点</a>を見てください。</li>
+<li><strong>いつからの取引を入れるか。</strong> 開業日や、副業を始めた日、または1月1日から入れるのが基本です。</li>
+<li><strong>すでに手入力した取引があるか。</strong> 手入力と自動取り込みが重なると、同じ取引が二重に入ります。</li>
+</ul>
+<h2>取り込める期間を先に確認する</h2>
+<p>銀行やカード会社によって、連携して取り込める過去の明細の期間に制限があることがあります。年末に初めて連携した場合、1月や2月の明細が取り込めないこともあります。取り込めない期間は、通帳やネットバンキングの明細、カードの利用明細を見て、手入力やファイルの読み込みで補います。取り込める期間は、ソフトと金融機関の案内で確認してください（最新の条件は<span class="unverified">未確認</span>）。</p>
+<p>年末までに取引を入れる順番は、<a href="../../articles/nenmatsu-kaikei-soft-torihiki/">年末までに会計ソフトへ取引を入れる順番と、確定申告前の料金プラン確認</a>でも整理しています。</p>
+<h2>カード払いの二重計上に注意する</h2>
+<p>事業の経費をクレジットカードで払い、その引き落としを銀行口座から行う場合、次の2つが取り込まれます。</p>
+<table>
+<thead>
+<tr>
+<th>取り込まれる明細</th>
+<th>一般的な扱い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>カードの利用明細（例：ソフトの購入）</td>
+<td>経費として記録する</td>
+</tr>
+<tr>
+<td>銀行口座からのカード代金の引き落とし</td>
+<td>未払金の支払いとして記録する（経費ではない）</td>
+</tr>
+</tbody>
+</table>
+<p>引き落としの明細を、もう一度経費として登録すると、同じ支出を2回経費にしてしまいます。多くのソフトでは、口座間やカードの引き落としを「振替」として扱う設定があります。</p>
+<h2>私用の取引の扱い</h2>
+<p>事業用と私用を同じ口座やカードで使っている場合は、私用の取引を経費にしないよう、1件ずつ確認します。私用の支出は「事業主貸」、私用の資金を事業に入れたときは「事業主借」として記録するのが一般的です。家賃や通信費など、事業と私用を兼ねるものは按分します。</p>
+<h2>自動仕訳のルールは、最初に確認する</h2>
+<p>ソフトによっては、取引先名などをもとに勘定科目を推測したり、同じ取引先を毎回同じ科目にするルールを作ったりできます。便利ですが、最初に間違った科目でルールを作ると、同じ間違いが1年分続きます。ルールを作った後、しばらくは取り込まれた結果を目で確認してください。</p>
+<h2>連携が切れたときの対応</h2>
+<p>金融機関側のパスワードの変更や、追加の認証の期限が切れたことなどで、連携が止まることがあります。止まっている間の明細は取り込まれないので、月に1回は、最後に取り込まれた日付を確認しておくと安心です。ログインの情報はソフトや金融機関の公式の画面だけで入力し、メールなどのリンクから入力しないようにしてください。</p>
+<h2>記帳を補助するソフトの例</h2>
+<p>口座やカードの連携、明細の取り込み、確定申告書の作成を補助するソフトの一例として、<a href="https://px.a8.net/svt/ejp?a8mat=4BGNCL+2UEMDE+4JGQ+BWVTE" target="_blank" rel="sponsored nofollow noopener noreferrer">マネーフォワード クラウド確定申告</a>、<a href="https://px.a8.net/svt/ejp?a8mat=4BGO4J+E6TZCY+3SPO+9FL80Y" target="_blank" rel="sponsored nofollow noopener noreferrer">freee会計</a>、<a href="https://px.a8.net/svt/ejp?a8mat=4BGO4J+E8MA6A+35XE+601S2" target="_blank" rel="sponsored nofollow noopener noreferrer">やよいの白色申告／青色申告オンライン</a>があります。対象は個人です。連携できる金融機関や、取り込める期間、料金プランはソフトと時期によって違います（最新の内容は<span class="unverified">未確認</span>）。ソフトを使っても、取引が事業のものか、どの科目にするかは自分で判断する必要があります。特定のソフトを勧めるものではなく、申告が正しく終わることや、税額は保証できません。最新の手数料・条件は公式サイトでご確認ください。ソフトを比べるときの見方は、<a href="../../articles/freee-yayoi-mf-hikaku/">個人事業主向け。freee・弥生・マネーフォワードを比較する前に見る点</a>を見てください。</p>
+<h2>よくある質問</h2>
+<p><strong>連携すれば、記帳は自動で終わりますか。</strong> いいえ。取り込まれるのは明細で、事業の取引かどうか、どの科目にするかの確認は必要です。現金で払った取引は、手入力が必要なことが多いです。</p>
+<p><strong>途中から連携した場合、前の取引はどうなりますか。</strong> 取り込める期間を過ぎた明細は、自動では入りません。通帳やカードの明細を見て、手入力などで補ってください。</p>
+<p><strong>取り込んだ明細を消したら、銀行のデータも消えますか。</strong> 一般に、ソフト上の記録を消しても、銀行やカード会社のデータは消えません。ただし、ソフトの仕様は各社の案内で確認してください。</p>
+<h2>まとめ</h2>
+<ul>
+<li>連携の前に、事業用の口座・カード、入れ始める日、手入力済みの取引を確認する</li>
+<li>取り込める過去の期間には制限があることがある。足りない分は手入力などで補う</li>
+<li>カード払いと口座からの引き落としの二重計上に注意する</li>
+<li>私用の取引は事業主貸・事業主借で扱い、自動仕訳のルールは最初に確認する</li>
+<li>最新の取扱いは、国税庁と各ソフトの公式案内でご確認ください</li>
+</ul>
+        </div>
+        <p class="article-endnote">本記事は一般的な情報提供です。税務助言、投資助言、特定の商品・業者・求人の推奨ではありません。制度やサービス内容は変わることがあります。最新の公式情報を確認してください。確認できていない事項は「未確認」と表示しています。就職、収入、税負担の軽減、投資の利益、最安値などは保証できません。</p>
+        <section class="related"><h2>関連する記事</h2><ul><li><a href="../../articles/cloud-kakuteishinkoku/">個人事業主・副業の確定申告で、クラウドソフトを使う前に決めること</a></li><li><a href="../../articles/nenmatsu-chosei-machigai/">令和8年分の年末調整で、落としやすい書き間違い</a></li><li><a href="../../articles/freee-yayoi-mf-hikaku/">個人事業主向け。freee・弥生・マネーフォワードを比較する前に見る点</a></li><li><a href="../../articles/aoiro-65man/">青色申告特別控除65万円の条件と、手続の順番</a></li></ul></section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <ul class="footer-nav">
+        <li><a href="../../">トップ</a></li>
+          <li><a href="../../categories/it-tenshoku/">IT転職</a></li>
+          <li><a href="../../categories/fukugyo/">副業</a></li>
+          <li><a href="../../categories/zeikin/">確定申告・税金</a></li>
+          <li><a href="../../categories/toushi/">投資</a></li>
+          <li><a href="../../categories/furusato/">ふるさと納税</a></li>
+          <li><a href="../../categories/travel/">旅行予約</a></li>
+          <li><a href="../../about/">運営者情報</a></li>
+          <li><a href="../../privacy/">プライバシー・広告</a></li>
+          <li><a href="../../contact/">お問い合わせ</a></li>
+      </ul>
+      <nav class="sister-sites" aria-label="姉妹サイト">
+        <h2>姉妹サイト</h2>
+        <ul>
+        <li><a href="https://ats-business-hub.github.io/travel-yoyaku-guide/">旅の予約ノート</a></li>
+        <li><a href="https://ats-business-hub.github.io/toushi-fx-nyumon/">はじめての投資・FX入門</a></li>
+        <li><a href="https://jobs.agtwn.com/">IT転職・社内SEガイド</a></li>
+        <li><a href="https://ats-business-hub.github.io/hikari-kaisen-guide/">光回線の申し込み前ノート</a></li>
+        <li><a href="https://ats-business-hub.github.io/hoken-sodan-guide/">保険相談の確認ノート</a></li>
+        <li><a href="https://ats-business-hub.github.io/online-school-guide/">オンラインスクールの申し込み前ノート</a></li>
+        </ul>
+      </nav>
+      <p>運営：BON ZAM SHIBA　｜　働く人の実務ガイド</p>
+      <p>記事内のリンクの一部には、A8.net、バリューコマースなどのアフィリエイト（成果報酬型広告）が含まれます。詳細は「プライバシー・広告」をご覧ください。</p>
+      <p>就職、転職、収入、税負担の軽減、投資の利益、最安値などを保証するものではありません。制度や各サービスの条件は公式情報で確認してください。確認できていない事項は「未確認」と表示します。</p>
+      <p class="small">© 2026 BON ZAM SHIBA</p>
+    </div>
+  </footer>
+</body>
+</html>
